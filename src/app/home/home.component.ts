@@ -24,7 +24,6 @@ export class HomeComponent implements OnInit {
         isDone:false
       }
       this.list.push(newItem)
-      console.log(this.list);
     }
     this.todoValue = '';
   }

@@ -1,3 +1,4 @@
+
 <div class="container">
     <div class="row ">
         <button routerLink="/maintodo" class="btn btn-warning">Main Todo</button>
@@ -9,27 +10,26 @@
                 <h1 class="display-5 fw-bold text-center text-white">LCO Todo List</h1>
                 <p class="mt-2 text-white">Add a Todo</p>
                 <div class="d-flex justify-content-between mt-2">
-                    <input [(ngModel)]="todoValue" 
-                    (keyup.enter)="addItem()"
-                    class="form-control" placeholder="Type a Todo">
+                    <input [(ngModel)]="title" class="form-control" placeholder="Type a Title">
+                    <input [(ngModel)]="description" class="form-control" placeholder="Type a description">
                     <div>
-                        <button (click)="addItem()" class="btn btn-primary">Add Todo</button>
+                        <button (click)="AddData()" class="btn btn-primary">Add Todo</button>
                     </div>
                 </div>
                 
                 <div class="mt-5 list">
                     <ul class="list-group">
-                        <li *ngFor="let item of list" class="list-group-item">
+                        <li  class="list-group-item">
                           <div class="d-flex justify-content-between">
                             <div class="mt-2">
-                                <input  [(ngModel)]="item.isDone" 
+                                <input
                                 class="form-check-input me-2" type="checkbox">
                                 
                                 <label class="form-check-label" 
-                                for="firstCheckbox"> {{item.value}} </label>
+                                for="firstCheckbox">  </label>
                               </div>  
                               <div>
-                                <button (click)="deleteItem(item.id)" class="btn btn-danger">Delate</button>
+                                <button class="btn btn-danger">Delate</button>
                               </div>
                           </div>
                         </li>
